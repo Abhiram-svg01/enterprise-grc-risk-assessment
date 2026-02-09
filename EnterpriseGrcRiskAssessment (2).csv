@@ -1,0 +1,31 @@
+﻿Asset Id ,Asset Name,,,,,,,
+,,,,,,,,
+A-01,Electronic Health Record (EHR) System,,,,,,,
+A-02,Patient Database,,,,,,,
+A-03,Cloud Storage,,,,,,,
+A-04,Internal Networks & Endpoints,,,,,,,
+A-05,Third-Party Billing Vendor,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Risk ID,Asset Name,Threat,Vulnerability,Likelihood,Impact,Risk Score,Risk Level,Existing Controls
+R-01,Electronic Health Record (EHR) System,Phishing,No MFA for user access,4,5,20,High,Password policy
+R-02,Patient Database,Ransomware,Backups not regularly tested,3,5,15,High,Daily backups
+R-03,Cloud Storage,Data breach,Misconfigured access controls,3,5,15,High,IAM roles
+R-04,Internal Networks & Endpoints,Insider threat,Excessive user privileges,3,4,12,Medium,HR onboarding
+R-05,Third-Party Billing Vendor,Third Party Compromise,No formal vendor risk assessment,3,4,12,Medium,Contract SLA
+,,,,,,,,
+,,,,,,,,
+Risk ID,Risk Description,NIST SP 800-53 Controls,ISO 27001 Controls,Control Status,,,,
+R-01,Phishing attack on EHR system,"IA-2, IA-5, AT-2, IR-4","A.6.3, A.8.2",Partial,,,,
+R-02,Ransomware impacting patient database,"CP-9, CP-10, IR-4","A.8.13, A.5.30",Partial,,,,
+R-03,Cloud data breach,"AC-3, CM-2, IA-2","A.5.15, A.8.3",Weak,,,,
+R-04,Insider threat,"AC-6, PS-3, IA-2","A.6.1, A.8.2",Partial,,,,
+R-05,Third-party compromise,"SR-3, RA-3","A.5.19, A.5.21",Missing,,,,
+,,,,,,,,
+,,,,,,,,
+Risk ID,Control Gap,Recommended Remediation,Priority,Owner,Timeline,Residual Risk,,
+R-01,Lack of MFA for user authentication,Implement MFA for all EHR system users and administrators,High,IT Security,30 days,Medium,,
+R-02,Backups not regularly tested,Establish periodic backup testing and ransomware recovery drills,High,IT Operations,45 days,Low,,
+R-03,Weak cloud access governance,Enforce least-privilege access and conduct quarterly access reviews,High,Cloud Security Team,45 days,Low,,
+R-04,Excessive user privileges,Implement role-based access control and periodic access reviews,Medium,IT Security,60 days,Low,,
+R-05,No formal third-party risk process,Establish a third-party risk management (TPRM) program,Medium,Compliance,90 days,Medium,,
